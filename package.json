@@ -1,0 +1,11 @@
+{
+  "name": "webpackplayground",
+  "version": "1.0.0",
+  "description": "Playground for webpack, react, tailwind poc",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
