@@ -31,10 +31,23 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: { "@": path.resolve(__dirname, "src/") },
   },
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/", // Ensure this is set for the dev server to work correctly
+  },
+  // Add devServer configuration
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3000, // You can specify another port here
+    open: true,
+    hot: true, // Enable webpack's Hot Module Replacement feature
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
